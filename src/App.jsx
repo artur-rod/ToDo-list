@@ -10,7 +10,13 @@ import TaskDetails from './components/TaskDetails';
 
 export default function App() {
 
-  const [tasks, setTasks] = useState([], JSON.parse(localStorage.getItem('tasks')));
+  const storage = () => {
+    const storage = JSON.parse(localStorage.getItem('tasks'));
+    if (storage === null || undefined) return ([]);
+    else return (storage)
+  }
+
+  const [tasks, setTasks] = useState(storage);
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map(task => {
