@@ -19,3 +19,18 @@
   margin-left: 10px;
   flex: 1;
 }
+
+@media screen and (max-width: 400px){
+  .add-task-container{
+    flex-direction: column;
+  }
+
+  .add-task-input{
+    padding: 10px 0;
+  }
+
+  .add-task-button-container{
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
